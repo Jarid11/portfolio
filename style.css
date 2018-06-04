@@ -62,6 +62,11 @@
     padding: 30px;
 }
 
+.about-box {
+    display: flex;
+    flex-direction: column;
+}
+
 .about-pic {
     width: 200px;
     height: 200px;
@@ -78,6 +83,7 @@
 
 .about-me-text {
     color: #7A7A7A;
+    line-height: 30px;
 }
 
 .projects-wrapper {
@@ -206,21 +212,24 @@
 }
 
 .footer-wrapper {
-    height: 25vh;
+    height: 30vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #0f0f0f;
     color: #525252;
+    position: relative;
 }
 
 .social-media-icons {
     height: 35px;
+    color: #525252;
 }
 
 .social-media-icons:hover {
     color: #ffffff;
+    transition: 1s;
 }
 
 .footer-container {
@@ -265,7 +274,48 @@
     color: #ffffff;
 }
 
+.resume-download-btn {
+    width: 50%;
+    margin: 20px auto;
+    text-align: center;
+    padding: 15px 20px;
+    background: #444;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+}
+
+.resume-download-btn:hover .resume-text {
+    color: #444;
+    transition: 1s;
+}
+
+.resume-download-btn:hover .download-btn {
+    color: #444;
+    transition: 1s;
+}
+
+.resume-download-btn:hover {
+    background: #ffffff;
+    transition: 1s;
+}
+
+.resume-text {
+    color: #ffffff;
+    text-decoration: none
+}
+
+.resume-text:hover {
+    color: #444;
+}
+
 @media(max-width: 600px) {
+
+    .header-links-container {
+        font-size: 16px;
+    }
+
     .skills-icons {
         /* width: 100px; */
         /* height: 50px; */
@@ -313,4 +363,55 @@
     .skills-containers {
         margin: 0 10px;
     }
+
+    .social-media-container{
+        width: 50%;
+    }
 }
+
+
+
+
+.animated {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: 5;
+    color: #ffffff;
+  }
+  @-webkit-keyframes bounce {
+    0%, 100% {
+      -webkit-transform: translateY(0);
+    }
+    50% {
+      -webkit-transform: translateY(-5px);
+    }
+  }
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  .bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+  }
+
+  .chevron-down {
+    position: absolute;
+    top: 88%;
+    font-size: 50px;
+  }
+
+  .chevron-up {
+    position: absolute;
+    font-size: 50px;
+    bottom: 80%;
+  }
